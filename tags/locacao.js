@@ -1,9 +1,44 @@
 import { precos } from "../boxes/box.js";
 
 export function locado(q, t,  x, y, z) {
+
+
+    if( $(window).width() <= 768){
+        $(".desc").css({"opacity": "1", "background": "None"})
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $("#quarto" + q).css({
         "background-color": "#FF0000",
         "opacity": 0.5})
+
+
+
+
+
+
+
+
+
+
     
     $("#tempo").css('margin-top', '-30px')
 
