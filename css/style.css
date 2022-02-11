@@ -1164,4 +1164,10 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   opacity: 0;
 }
 
+#imagemQuarto1 {
+  border: 2px solid #4cae4c;
+  box-shadow: inset 0 0 1em #4cae4c, 0 0 1em #4cae4c;
+  background-image: url(../images/img-11.jpg)
+}
+
 /*# sourceMappingURL=style.css.map */
