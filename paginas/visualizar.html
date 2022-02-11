@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte || Visualizações</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="accordion">
+
+    <!-- Cabeçalho -->
+    <div class="card">
+      <div class="card-header" id="headingCabecalho">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseCabecalho" aria-expanded="true"
+            aria-controls="collapseCabecalho">
+            <h1>Visualizações</h1>
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseCabecalho" class="collapse show" aria-labelledby="headingCabecalho" data-parent="#accordion">
+        <div class="card-body">
+          Visualize todas as tabelas e relatórios nessa tela.
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista de Quartos -->
+    <div class="card">
+      <div class="card-header" id="headingLQ">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseLQ" aria-expanded="false"
+            aria-controls="collapseLQ">
+            Lista de Quartos
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseLQ" class="collapse" aria-labelledby="headingLQ" data-parent="#accordion">
+        <div class="card-body">
+          <table border="1" class="table">
+            <thead>
+              <tr>
+                <th>Cod</th>
+                <th>Desc</th>
+                <th>Qtd</th>
+                <th>Unit</th>
+                <th>Serviço</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="cadastro.html">5</a></td>
+                <td>Bombom</td>
+                <td>6</td>
+                <td>0.25</td>
+                <td></td>
+                <td>1.50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista de Produtos-->
+    <div class="card">
+      <div class="card-header" id="headingLP">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseLP"
+            aria-expanded="false" aria-controls="collapseLP">
+            Lista de Produtos
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseLP" class="collapse" aria-labelledby="headingLP" data-parent="#accordion">
+        <div class="card-body">
+          <table border="1" class="table">
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Descrição</th>
+                <th>Valor Unt</th>
+                <th>Quantidade</th>
+                <th>Categoria</th>
+                <th>Data Compra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="pop.html">5</a></td>
+                <td>Bombom</td>
+                <td>6</td>
+                <td>0.25</td>
+                <td></td>
+                <td>1.50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Relatório de Ocupações -->
+    <div class="card">
+      <div class="card-header" id="headingRO">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseRO" aria-expanded="false"
+            aria-controls="collapseRO">
+            Relatório de Ocupações
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseRO" class="collapse" aria-labelledby="headingRO" data-parent="#accordion">
+        <div class="card-body">
+          <table border="1" class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="pop.html">0</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Relatório de Saída de Produtos -->
+    <div class="card">
+      <div class="card-header" id="headingRSP">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseRSP" aria-expanded="false"
+            aria-controls="collapseRSP">
+            Relatório de Saída de Produtos
+          </button>
+        </h5>
+      </div>
+      <div id="collapseRSP" class="collapse" aria-labelledby="headingRSP" data-parent="#accordion">
+        <div class="card-body">
+          <table border="1" class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+                <th>#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="pop.html">0</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="../paginas_js/validacao.js"></script>
+
+</html>

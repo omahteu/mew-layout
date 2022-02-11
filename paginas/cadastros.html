@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte || Cadastros</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="accordion">
+
+    <!-- Cabeçalho -->
+    <div class="card">
+      <div class="card-header" id="headingCabecalho">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseCabecalho" aria-expanded="true"
+            aria-controls="collapseCabecalho">
+            <h1>Cadastros</h1>
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseCabecalho" class="collapse show" aria-labelledby="headingCabecalho" data-parent="#accordion">
+        <div class="card-body">
+          Realize todos os cadastros necessários nessa tela.
+        </div>
+      </div>
+    </div>
+
+    <!-- Cadastro de Quartos -->
+    <div class="card">
+      <div class="card-header" id="headingQuartos">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseQuartos"
+            aria-expanded="false" aria-controls="collapseQuartos">
+            Cadastro de Quartos
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseQuartos" class="collapse" aria-labelledby="headingQuartos" data-parent="#accordion">
+        <div class="card-body">
+          <form action="">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" id="codigo_quarto" placeholder="Código do Quarto">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="numero_quarto" placeholder="Número do Quarto">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="horas_locacao" placeholder="Qtd Horas Locação">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="valor_locacao" placeholder="Valor Locação">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Qtd Horas Pernoite">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Pernoite">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tempo Especial">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Especial">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Qtd Horas Diária">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Diária">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tempo Adicional (Minutos)">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Hora Adicional">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tolerância (Minutos)">
+              </div>
+
+              <div class="col">
+                <div class="form-group col-md-4">
+                  <select id="inputState" class="form-controle">
+                    <option selected>...</option>
+                    <option>Ventilador</option>
+                    <option>Ar</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="forme-check-label" for="gridCheck">
+                      Adicional em Percentual
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tolerância (Minutos)" hidden>
+              </div>
+            </div>
+
+            <div class="form-check forme-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="forme-check-label" for="inlineRadio1">Fixo</label>
+            </div>
+            <div class="form-check forme-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="forme-check-label" for="inlineRadio2">Por Hora</label>
+            </div>
+            <div class="form-check forme-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+              <label class="forme-check-label" for="inlineRadio3">Período</label>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor 1ª Hora">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor 2ª Hora">
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor 3ª Hora">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor 4ª Hora">
+              </div>
+
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor 5ª Hora">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor 6ª Hora">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="button" class="btn btn-success" value="Salvar" onclick="formulario()">
+              </div>
+              <div class="col">
+                <input type="button" class="btn btn-danger" value="Excluir">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cadastro de Produtos -->
+    <div class="card">
+      <div class="card-header" id="headingProdutos">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseProdutos"
+            aria-expanded="false" aria-controls="collapseProdutos">
+            Cadastro de Produtos
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseProdutos" class="collapse" aria-labelledby="headingProdutos" data-parent="#accordion">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Código">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Descrição">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Unitário">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Categoria">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="date" class="form-control" name="" id="">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Pernoite" hidden>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tempo Especial" hidden>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Especial" hidden>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="button" class="btn btn-success" value="Salvar">
+              </div>
+              <div class="col">
+                <input type="button" class="btn btn-danger" value="Excluir">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cadastro Informações Gerais -->
+    <div class="card">
+      <div class="card-header" id="headingIG">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseIG" aria-expanded="false"
+            aria-controls="collapseIG">
+            Cadastro Informações Gerais
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseIG" class="collapse" aria-labelledby="headingIG" data-parent="#accordion">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Código">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Descrição">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Unitário">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Categoria">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="date" class="form-control" name="" id="">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Pernoite" hidden>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tempo Especial" hidden>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Valor Especial" hidden>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="button" class="btn btn-success" value="Salvar">
+              </div>
+              <div class="col">
+                <input type="button" class="btn btn-danger" value="Excluir">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cadastro Email -->
+    <div class="card">
+      <div class="card-header" id="headingEmail">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEmail" aria-expanded="false"
+            aria-controls="collapseEmail">
+            Cadastro Email
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseEmail" class="collapse" aria-labelledby="headingEmail" data-parent="#accordion">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Usuário">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="SMTP">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Porta">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Timeout (seg)">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Password">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Email Destino">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Email Contabilidade">
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="forme-check-label" for="gridCheck">
+                      Requer Autenticação
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="button" value="Salvar">
+              </div>
+              <div class="col">
+                <input type="button" value="Excluir">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cadastro de Camareiras -->
+    <div class="card">
+      <div class="card-header" id="headingCamareiras">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCamareiras"
+            aria-expanded="false" aria-controls="collapseCamareiras">
+            Cadastro de Camareiras
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseCamareiras" class="collapse" aria-labelledby="headingCamareiras" data-parent="#accordion">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Camareiras">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="button" class="btn btn-success" value="Salvar">
+              </div>
+              <div class="col">
+                <input type="button" class="btn btn-danger" value="Excluir">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Configurações -->
+    <div class="card">
+      <div class="card-header" id="headingConfig">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseConfig"
+            aria-expanded="false" aria-controls="collapseConfig">
+            Configurações
+          </button>
+        </h5>
+      </div>
+
+      <div id="collapseConfig" class="collapse" aria-labelledby="headingConfig" data-parent="#accordion">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Camareiras">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <input type="button" class="btn btn-success" value="Salvar">
+              </div>
+              <div class="col">
+                <input type="button" class="btn btn-danger" value="Excluir">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="../paginas_js/validacao.js"></script>
+
+</html>
