@@ -61,11 +61,6 @@ $.get("http://127.0.0.1:8000/index/", function(resultado){
             var qtd = $(this).val()
             var total = Number(resultado[db]['registro']) * Number(qtd)
             $("#tot").val('R$ ' + total)
-    
         });
     });
-
-
-
-
 })
