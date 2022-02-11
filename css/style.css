@@ -1171,4 +1171,66 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   border-radius: 50%;
 }
 
+#a1, #a2, #a3, #a4, #a5, #a6 {
+  visibility: hidden;
+  color: #000;
+  background: rgba(117, 190, 218, 0);
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  width: 11em;
+  margin-left: 45px;
+  border-radius: 10%;
+  margin-top: 5px;
+}
+
+.reservado {
+  background: #1E90FF;
+  color: #fff;
+  border: 2px solid #1E90FF;
+  border-radius: 20%;
+}
+
+.limpeza {
+  background: #F0E68C;
+  color: #fff;
+  border: 2px solid #F0E68C;
+  border-radius: 20%;
+}
+
+.aguardando {
+  background: #DAA520;
+  color: #fff;
+  border: 2px solid #DAA520;
+  border-radius: 20%;
+}
+
+.manutencao {
+  background: 	#A9A9A9;
+  color: #fff;
+  border: 2px solid 	#A9A9A9;
+  border-radius: 20%;
+}
+
+.pernoite {
+  background: 	#8B008B;
+  color: #fff;
+  border: 2px solid 	#8B008B;
+  border-radius: 20%;
+}
+
+.locado {
+  background: 	#FF0000;
+  color: #fff;
+  border: 2px solid 	#FF0000;
+  border-radius: 20%;
+}
+
+.faxina {
+  background: 	#FFE4C4;
+  color: #fff;
+  border: 2px solid 	#FFE4C4;
+  border-radius: 20%;
+}
+
 /*# sourceMappingURL=style.css.map */
