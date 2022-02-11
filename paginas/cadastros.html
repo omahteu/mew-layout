@@ -184,14 +184,14 @@
 
       <div id="collapseProdutos" class="collapse" aria-labelledby="headingProdutos" data-parent="#accordion">
         <div class="card-body">
-          <form>
+          <form id="formPostProduto">
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Código">
-                <input type="text" class="form-control" placeholder="Valor Unitário">
-                <input type="text" class="form-control" placeholder="Descrição">
-                <input type="text" class="form-control" placeholder="Categoria">
-                <input type="date" class="form-control" name="" id="">
+                <input type="text" class="form-control" id="codigo" placeholder="Código">
+                <input type="text" class="form-control" id="valor" placeholder="Valor Unitário">
+                <input type="text" class="form-control" id="descricao" placeholder="Descrição">
+                <input type="text" class="form-control" id="categoria" placeholder="Categoria">
+                <!-- <input type="date" class="form-control" name="" id=""> -->
               </div>
               <!-- <div class="col">
                 <input type="text" class="form-control" placeholder="Descrição">
@@ -228,10 +228,10 @@
 
             <div class="row">
               <div class="col">
-                <input type="button" class="btn btn-success" value="Salvar">
+                <input type="button" class="btn btn-success" id="salvar" value="Salvar">
               </div>
               <div class="col">
-                <input type="button" class="btn btn-danger" value="Excluir">
+                <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
           </form>
@@ -430,12 +430,22 @@
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="../paginas_js/jquery.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="../paginas_js/validacao.js"></script>
+
+<script src="../ajaxs/postProduto.js"></script>
+
+<script>
+  function limpar(){
+    document.getElementById('formPostProduto').reset()
+  }
+</script>
 
 </html>
