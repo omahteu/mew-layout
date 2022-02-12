@@ -373,19 +373,19 @@
 
       <div id="collapseCamareiras" class="collapse" aria-labelledby="headingCamareiras" data-parent="#accordion">
         <div class="card-body">
-          <form>
+          <form id="formPostCamareira">
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Camareiras">
+                <input type="text" class="form-control" id="camareira" placeholder="Camareiras">
               </div>
             </div>
 
             <div class="row">
               <div class="col">
-                <input type="button" class="btn btn-success" value="Salvar">
+                <input type="button" class="btn btn-success" id="salvarCamareira" value="Salvar">
               </div>
               <div class="col">
-                <input type="button" class="btn btn-danger" value="Excluir">
+                <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
           </form>
@@ -438,13 +438,15 @@
   integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../paginas_js/validacao.js"></script>
 
+<script src="../paginas_js/validacao.js"></script>
 <script src="../ajaxs/postProduto.js"></script>
+<script src="../ajaxs/postCamareira.js"></script>
 
 <script>
-  function limpar(){
+  function limpar() {
     document.getElementById('formPostProduto').reset()
+    document.getElementById('formPostCamareira').reset()
   }
 </script>
 
