@@ -191,40 +191,8 @@
                 <input type="text" class="form-control" id="valor" placeholder="Valor Unitário">
                 <input type="text" class="form-control" id="descricao" placeholder="Descrição">
                 <input type="text" class="form-control" id="categoria" placeholder="Categoria">
-                <!-- <input type="date" class="form-control" name="" id=""> -->
               </div>
-              <!-- <div class="col">
-                <input type="text" class="form-control" placeholder="Descrição">
-                <input type="text" class="form-control" placeholder="Categoria">
-              </div>
-              <div class="col">
-                <input type="date" class="form-control" name="" id="">
-              </div> -->
-              <!-- <div class="col">
-                <input type="text" class="form-control" placeholder="Valor Unitário">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Categoria">
-              </div>
-              <div class="col">
-                <input type="date" class="form-control" name="" id="">
-              </div> -->
             </div>
-
-            <!-- <div class="row">
-              <div class="col">
-                <input type="date" class="form-control" name="" id="">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Valor Pernoite" hidden>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Tempo Especial" hidden>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Valor Especial" hidden>
-              </div>
-            </div> -->
 
             <div class="row">
               <div class="col">
@@ -252,46 +220,60 @@
 
       <div id="collapseIG" class="collapse" aria-labelledby="headingIG" data-parent="#accordion">
         <div class="card-body">
-          <form>
+          <form id="formPostIG">
             <div class="row">
               <div class="col">
-                <input type="text" class="form-control" placeholder="Código">
+                <input type="text" class="form-control" id="social" placeholder="Razão Social">
+                <input type="text" class="form-control" id="fantasia" placeholder="Nome Fantasia">
+                <input type="text" class="form-control" id="cnpj" placeholder="CNPJ">
+                <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+                <input type="text" class="form-control" id="endereco" placeholder="Endereço">
+                <input type="text" class="form-control" id="numero" placeholder="Número">
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                <input type="text" class="form-control" id="telefone" placeholder="Telefone">
+                <input type="text" class="form-control" id="telefone2" placeholder="Telefone 2">
+                <input type="text" class="form-control" id="telefone3" placeholder="Telefone 3">
+              </div>
+              <!-- <div class="col">
+                <input type="text" class="form-control" placeholder="Nome Fantasia">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Descrição">
+                <input type="text" class="form-control" placeholder="CNPJ">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Valor Unitário">
+                <input type="text" class="form-control" placeholder="Cidade">
+              </div>-->
+            </div> 
+            <!-- <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Endereço">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Categoria">
+                <input type="text" class="form-control" placeholder="Número">
               </div>
-            </div>
-
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Bairro">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Telefone">
+              </div>
+            </div> -->
+          
             <div class="row">
               <div class="col">
-                <input type="date" class="form-control" name="" id="">
+                <input type="button" class="btn btn-success" id="salvarIG" value="Salvar">
               </div>
               <div class="col">
-                <input type="text" class="form-control" placeholder="Valor Pernoite" hidden>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Tempo Especial" hidden>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Valor Especial" hidden>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <input type="button" class="btn btn-success" value="Salvar">
-              </div>
-              <div class="col">
-                <input type="button" class="btn btn-danger" value="Excluir">
+                <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
           </form>
+
+
+
+
+
+
         </div>
       </div>
     </div>
@@ -440,11 +422,13 @@
 <script src="../paginas_js/validacao.js"></script>
 <script src="../ajaxs/postProduto.js"></script>
 <script src="../ajaxs/postCamareira.js"></script>
+<script src="../ajaxs/postIG.js"></script>
 
 <script>
   function limpar() {
     document.getElementById('formPostProduto').reset()
     document.getElementById('formPostCamareira').reset()
+    document.getElementById('formPostIG').reset()
   }
 </script>
 
