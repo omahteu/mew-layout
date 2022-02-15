@@ -24,7 +24,7 @@ $("#salvarIG").click(function(){
         telefone3: telefone3
     }
 
-    $.post("http://127.0.0.1:8000/cadastroig/", dados, function(msg){
+    $.post("http://127.0.0.1:8000/igs/", dados, function(msg){
         alert("Informações Registradas!")
 
         document.getElementById('formPostIG').reset()

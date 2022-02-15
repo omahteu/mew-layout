@@ -21,7 +21,7 @@ $("#salvar").click(function(){
             data: horaAtual
         }
 
-    $.post("http://127.0.0.1:8000/cadastroproduto/", dados, function(msg){
+    $.post("http://127.0.0.1:8000/produtos/", dados, function(msg){
         alert("Produto Registrado!")
 
         document.getElementById('formPostProduto').reset()

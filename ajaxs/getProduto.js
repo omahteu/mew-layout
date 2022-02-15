@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.get("http://127.0.0.1:8000/cadastroproduto/", function(resultado){
+    $.get("http://127.0.0.1:8000/produtos/", function(resultado){
 
     resultado.forEach(function(item){
         $('#cod').append('<option>' + item.descricao + '</option>');
