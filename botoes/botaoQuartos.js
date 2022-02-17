@@ -13,7 +13,7 @@ $(".tarja").click(function(){
             break
 
         case 'Relatórios':
-            window.open('../paginas/cadastros.html', '_blank');
+            window.open('../paginas/visualizar.html', '_blank');
             break
     
         default:
