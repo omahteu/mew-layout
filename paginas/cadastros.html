@@ -64,20 +64,23 @@
                 </label>
                 <input type="text" class="form-control" placeholder="Valor Hora Adicional">
                 <input type="text" class="form-control" placeholder="Tolerância (Minutos)">
-                <select id="inputState" class="form-controle">
-                  <option selected>...</option>
-                  <option>Ventilador</option>
-                  <option>Ar</option>
-                </select>
-                
-
-                
-                <select id="inputState" class="form-controle">
-                  <option selected>...</option>
-                  <option>Fixo</option>
-                  <option>Por Hora</option>
-                  <option>Diária</option>
-                </select>
+                <div>
+                  <div class="box">
+                    <select id="inputState" class="form-controle">
+                      <option selected>...</option>
+                      <option>Ventilador</option>
+                      <option>Ar</option>
+                    </select>
+                  </div>
+                  <div class="box">
+                    <select id="inputState" class="form-controle">
+                      <option selected>...</option>
+                      <option>Fixo</option>
+                      <option>Por Hora</option>
+                      <option>Diária</option>
+                    </select>
+                  </div>
+                </div>
                 <input type="text" class="form-control" placeholder="Valor 1ª Hora">
                 <input type="text" class="form-control" placeholder="Valor 2ª Hora">
                 <input type="text" class="form-control" placeholder="Valor 3ª Hora">
@@ -90,8 +93,6 @@
             <div class="row">
               <div class="col">
                 <input type="button" class="btn btn-success" value="Salvar">
-              </div>
-              <div class="col">
                 <input type="button" class="btn btn-danger" value="Limpar">
               </div>
             </div>
@@ -127,8 +128,6 @@
             <div class="row">
               <div class="col">
                 <input type="button" class="btn btn-success" id="salvar" value="Salvar">
-              </div>
-              <div class="col">
                 <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
@@ -164,46 +163,14 @@
                 <input type="text" class="form-control" id="telefone2" placeholder="Telefone 2">
                 <input type="text" class="form-control" id="telefone3" placeholder="Telefone 3">
               </div>
-              <!-- <div class="col">
-                <input type="text" class="form-control" placeholder="Nome Fantasia">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="CNPJ">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Cidade">
-              </div>-->
             </div> 
-            <!-- <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Endereço">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Número">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Bairro">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Telefone">
-              </div>
-            </div> -->
-          
             <div class="row">
               <div class="col">
                 <input type="button" class="btn btn-success" id="salvarIG" value="Salvar">
-              </div>
-              <div class="col">
                 <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
           </form>
-
-
-
-
-
-
         </div>
       </div>
     </div>
@@ -241,8 +208,6 @@
             <div class="row">
               <div class="col">
                 <input type="button" class="btn btn-success" id="salvarCamareira" value="Salvar">
-              </div>
-              <div class="col">
                 <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
@@ -274,8 +239,6 @@
             <div class="row">
               <div class="col">
                 <input type="button" class="btn btn-success" id="salvarCamareira" value="Salvar">
-              </div>
-              <div class="col">
                 <input type="button" class="btn btn-danger" onclick="limpar()" value="Limpar">
               </div>
             </div>
