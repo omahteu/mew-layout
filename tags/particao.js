@@ -12,7 +12,7 @@ export function index(){
     var valor = $("#valor-quarto").text()
 
     // Quarto
-    var quarto = $("#quarto").text()
+    var quarto = $("#numquarto").text()
 
     // Agrupando Dados
     var dado = {
@@ -28,7 +28,7 @@ export function index(){
     if(localStorage.getItem('quarto' + quarto) === null){
         localStorage.setItem('quarto' + quarto, codigoID);
     } else (
-        console.log('já rxite')
+        console.log('já exite')
     )
 
     // Salvar em LocalStorage

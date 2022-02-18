@@ -17,7 +17,7 @@ function gera_id(){
 
 function registroVeiculo(){
 
-	var quarto =  $("#quarto").text()
+	var quarto =  $("#numquarto").text()
 	var veiculo = $("#tipoVeiculo").val()
     var modelo = $("#modelo").val()
     var placa = $("#placa").val()
@@ -62,7 +62,7 @@ function removeVeiculo(operacao){
 
 function mostraVeiculo(){
 
-	var nuQuarto =  $("#quarto").text()
+	var nuQuarto =  $("#numquarto").text()
 	var dados_garagem = JSON.parse(localStorage.getItem('garagem'))
 	var patio = document.getElementById('garagem')
 	patio.innerHTML = ''

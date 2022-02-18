@@ -7,6 +7,6 @@ export function disponivel(q, x, y, z) {
 
     $("[id=botaoq" + q + "]").css('visibility', 'hidden')
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('disponivel')
 }

@@ -9,7 +9,7 @@ function actividade(e) {
 }
 
 function inativo() {
-	$("#quarto").text('0')
+	$("#numquarto").text('0')
 	$("#intervalo").text('0')
   $("#tipo").text('0')
   $("#entrada").text('')

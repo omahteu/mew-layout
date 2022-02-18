@@ -2,7 +2,7 @@ import { codigosIDs } from "../tags/particao.js"
 
 function mostraProduto(){
 
-	var nQuarto =  $("#quarto").text()
+	var nQuarto =  $("#numquarto").text()
 	var dados_produtos = JSON.parse(localStorage.getItem('produtos'))
 	var prateleira = document.getElementById('lprodutos');
 	prateleira.innerHTML = '';
@@ -97,11 +97,11 @@ function backupInfos(instancia){
 
 	// Exibição dos Dados Recuperados
 	try {
-		$("#quarto").text(dados_quarto[0].quarto)
+		$("#numquarto").text(dados_quarto[0].quarto)
 		$("#entrada").text(dados_quarto[0].datahora)
 		$("#valor-quarto").text(dados_quarto[0].valor)
 	} catch (error) {
-		$("#quarto").text('')
+		$("#numquarto").text('')
 		$("#entrada").text('')
 		$("#valor-quarto").text('')
 	}

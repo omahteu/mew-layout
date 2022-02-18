@@ -23,7 +23,7 @@ export function faxina(q, t, x, y, z) {
         $("#" + z).val('Cancelar Reserva')
     } 
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('faxina')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')

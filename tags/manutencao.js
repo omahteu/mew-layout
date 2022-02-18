@@ -21,7 +21,7 @@ export function manutencao(q, x, y, z) {
     $("#" + z).css('visibility', 'visible')
     $("#" + z).val('Ligar Luz')
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('manutencao')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')

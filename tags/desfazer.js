@@ -13,7 +13,7 @@ export function desfazer(q, x, y, z) {
     $("#" + z).val('')
 
     $("#tempo").text("00:00:00")
-    $("#quarto").text('0')
+    $("#numquarto").text('0')
     $("#tipo").text('0')
     $("#entrada").text('')
     $("#valor-quarto").text('0')

@@ -24,7 +24,7 @@ function registroProduto(){
 	var descricao = $("#des").val()
     var quantidade = $("#qtd").val()
 	var valorTotal = $("#tot").val()
-    var quarto =  $("#quarto").text()
+    var quarto =  $("#numquarto").text()
     var valorUnitario = $("#vun").val()
     
     // Objeto com Parãmtros
@@ -72,7 +72,7 @@ function removeProduto(operacao){
 
 function mostraProduto(){
 
-	var nQuarto =  $("#quarto").text()
+	var nQuarto =  $("#numquarto").text()
 	var dados_produtos = JSON.parse(localStorage.getItem('produtos'))
 	var prateleira = document.getElementById('lprodutos');
 	prateleira.innerHTML = '';

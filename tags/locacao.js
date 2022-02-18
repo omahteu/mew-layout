@@ -39,7 +39,7 @@ export function locado(q, t,  x, y, z) {
             break
     }
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('locado')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')

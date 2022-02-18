@@ -21,7 +21,7 @@ export function aguardando(q, x, y, z) {
     // $("#" + z).css('visibility', 'visible')
     // $("#" + z).val('Cancelar Reserva')
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('aguardando')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')

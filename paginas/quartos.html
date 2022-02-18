@@ -44,7 +44,7 @@
 					<li>
 						<p class="infos">Entrada: <span id="entrada"></span></p>
 						<p class="infos">Valor: R$ <span id="valor-quarto">0</span></p>
-						<p class="infos">Quarto: <span id="quarto">0</span></p>
+						<p class="infos">Quarto: <span id="numquarto">0</span></p>
 						<p class="infos" id="tipo" hidden>0</p>
 						<p class="infos" id="intervalo" hidden>0</p>
 						<p class="infos" id="idquarto" hidden></p>
@@ -122,49 +122,25 @@
 			<div class="fh5co-narrow-content">
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Quartos</h2>
 				<div class="row row-bottom-padded-md" id="qr">
-
 					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" id="imagemQuarto1">
-							<div class="desc" id="quarto1">
-								<h3 id="tipo1">AR</h3>
+						<a href="#" class="work image-popup" id="imagemQuarto">
+							<div class="desc" id="quarto">
+								<h3 id="tipo2">VENTILADOR</h3>
 								<h3 id="tempo">00:00:00</h3>
-								<h3 id="status" hidden>d</h3>
-								<!-- <button type="button" name="1" id="botaoq1" class="btn reservado"></button> -->
-								<!-- <button type="button" name="1" id="botaoq1" class="btn limpeza"></button> -->
-								<!-- <button type="button" name="1" id="botaoq1" class="btn aguardando"></button> -->
+								<h3 id="status" hidden></h3>
+								<!--<button type="button" name="1" id="botaoq1" class="btn reservado"></button>
+								<button type="button" name="1" id="botaoq1" class="btn limpeza"></button>
+								<button type="button" name="1" id="botaoq1" class="btn aguardando"></button>-->
 								<button type="button" name="1" id="botaoq1" class="btn manutencao"></button>
-								<!-- <button type="button" name="1" id="botaoq1" class="btn pernoite"></button> -->
+								<!--<button type="button" name="1" id="botaoq1" class="btn pernoite"></button>-->
 								<button type="button" name="1" id="botaoq1" class="btn locado"></button>
 								<button type="button" name="1" id="botaoq1" class="btn faxina"></button>
-								<button type="button" name="1" id="botaoq1" class="btn disponivel"></button>
+								
 							</div>
 						</a>
 						<input type="button" value="" id="a1">
 						<input type="button" value="" id="a2">
 						<input type="button" value="" id="a3">
-
-
-					</div>
-
-					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
-						<a href="#" class="work image-popup" id="imagemQuarto2">
-							<div class="desc" id="quarto2">
-								<h3 id="tipo2">VENTILADOR</h3>
-								<h3 id="tempo">00:00:00</h3>
-								<h3 id="status" hidden>d</h3>
-								<!-- <button type="button" name="2" id="botaoq2" class="btn reservado"></button> -->
-								<!-- <button type="button" name="2" id="botaoq2" class="btn limpeza"></button> -->
-								<!-- <button type="button" name="2" id="botaoq2" class="btn aguardando"></button> -->
-								<button type="button" name="2" id="botaoq2" class="btn manutencao"></button>
-								<!-- <button type="button" name="2" id="botaoq2" class="btn pernoite"></button> -->
-								<button type="button" name="2" id="botaoq2" class="btn locado"></button>
-								<button type="button" name="2" id="botaoq2" class="btn faxina"></button>
-								<button type="button" name="2" id="botaoq2" class="btn disponivel"></button>
-							</div>
-						</a>
-						<input type="button" value="" id="a4">
-						<input type="button" value="" id="a5">
-						<input type="button" value="" id="a6">
 					</div>
 				</div>
 			</div>
@@ -209,6 +185,8 @@
 
 	<script src="../armazem/armazemProdutos.js"></script>
 	<script src="../armazem/armazemVeiculos.js"></script>
+
+	<script src="../ajaxs/getExibicaoQuartos.js"></script>
 
 </body>
 

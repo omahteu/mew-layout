@@ -1,6 +1,6 @@
 function mostraVeiculo(){
 
-	var nuQuarto =  $("#quarto").text()
+	var nuQuarto =  $("#numquarto").text()
 	var dados_garagem = JSON.parse(localStorage.getItem('garagem'))
 	var patio = document.getElementById('garagem')
 	patio.innerHTML = ''
@@ -56,10 +56,10 @@ $("#quarto2").mousedown(function(){
 			break
 	}
 
-	$("#quarto").text('2')
+	$("#numquarto").text('2')
 	$("#intervalo").text('a4,a5,a6')
 
-	let quarto = $("#quarto").text()
+	let quarto = $("#numquarto").text()
 	let tipo = $("#tipo").text()
 	let tipos = ['pernoite', 'locado']
 

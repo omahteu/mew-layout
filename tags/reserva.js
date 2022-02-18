@@ -21,7 +21,7 @@ export function reservado(q, x, y, z) {
     $("#" + z).css('visibility', 'visible')
     $("#" + z).val('Cancelar Reserva')
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('reservado')
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
     $("#intervalo").text(x + "," + y + "," + z)

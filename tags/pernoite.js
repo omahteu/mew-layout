@@ -36,7 +36,7 @@ export function pernoite(q, t, x, y, z) {
             break
     }
 
-    $("#quarto").text(q)
+    $("#numquarto").text(q)
     $("#tipo").text('pernoite')
     $("#intervalo").text(x + "," + y + "," + z)
     $("#entrada").text(String(hora) + ':' + String(minutos) + 'h')
