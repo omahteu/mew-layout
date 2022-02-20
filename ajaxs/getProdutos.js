@@ -1,11 +1,5 @@
-$(document).ready(function(){
-
-    mostra()
-})
-
-function mostra(){
+export function dadosProdutos() {
     $.get("http://127.0.0.1:8000/produtos/", function(resultado){
-
 
         var tabela = document.getElementById('tabelaProdutos')
         tabela.innerHTML = ''

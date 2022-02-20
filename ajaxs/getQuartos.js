@@ -1,15 +1,8 @@
-$(document).ready(function(){
-
-    mostra()
-})
-
-function mostra(){
+export function dadosQuartos() {
     $.get("http://127.0.0.1:8000/quartos/", function(resultado){
-
 
         var tabela = document.getElementById('tabelaQuartos')
         tabela.innerHTML = ''
-
         
         for(var i = 0; i < resultado.length; i++){
             
