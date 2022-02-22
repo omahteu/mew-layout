@@ -27,7 +27,9 @@ export function triagem(acao, quarto, x, y, z){
                 // Verificar se já posso apagar os dados aqui, ou só depois
 
                 desfazer(quarto, x, y, z)
-                // $(location).attr('href', 'checkout.html');
+
+                sessionStorage.setItem('Encerrando', quarto)
+
                 window.open('../paginas/checkout.html', '_blank');
                 aguardando(quarto, x, y, z)
               } else {

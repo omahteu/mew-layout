@@ -1,5 +1,3 @@
-import { codigosIDs } from "../tags/particao.js"
-
 function mostraProduto(){
 
 	var nQuarto =  $("#numquarto").text()
@@ -36,12 +34,13 @@ function mostraProduto(){
 	
 }
 
-$("#quarto1").mousedown(function(){
+$("#mon").mousedown(function(){
 
-	var instance = $(this).context.id
+	var instance = $(this)[0].childNodes[1].id.slice(6).toLowerCase()
+	console.log($(this))
 
 	// Recuperação da Cor das Tags
-	var cor = $(this).css("background-color")
+	var cor = $("#" + instance).css("background-color")
 	
 	// Filtro para Restaurar as Tags Corretas
 	switch(cor){

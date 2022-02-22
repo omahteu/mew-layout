@@ -1,34 +1,48 @@
-function mostraVeiculo(){
+function mostraProduto(){
 
-	var nuQuarto =  $("#numquarto").text()
-	var dados_garagem = JSON.parse(localStorage.getItem('garagem'))
-	var patio = document.getElementById('garagem')
-	patio.innerHTML = ''
+	var nQuarto =  $("#numquarto").text()
+	var dados_produtos = JSON.parse(localStorage.getItem('produtos'))
+	var prateleira = document.getElementById('lprodutos');
+	prateleira.innerHTML = '';
 
-	var dados = dados_garagem.filter(quartos => quartos.quarto == nuQuarto)
+	try {
+		var dados = dados_produtos.filter(quartos => quartos.quarto == nQuarto)
 
-	for(var i = 0; i < dados.length; i++){
+		for(var i = 0; i < dados.length; i++){
 
-		var quarto =  dados[i].quarto
-		var veiculo =  dados[i].veiculo
-		var modelo = dados[i].modelo
-		var placa = dados[i].placa
-		var operacao = dados[i].operacao
-
-		patio.innerHTML += '<tr><td>'+ quarto + '</td>'+
-		 						'<td>'+ veiculo + '</td>' +
-								'<td>'+ modelo + '</td>' +
-								'<td>'+ placa + '</td>' +
-								'<td hidden>'+ operacao + '</td>'+
-		 						'<td><button onclick="removeVeiculo('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
-		 					'</tr>';
+			var operacao =  dados[i].operacao
+			var quarto =  dados[i].quarto
+			var codigo = dados[i].codigo
+			var descricao = dados[i].descricao
+			var quantidade = dados[i].quantidade
+			var valorUnitario = dados[i].valor_unitario
+			var valorTotal = dados[i].valor_total
+	
+			prateleira.innerHTML += '<tr><td hidden>'+ operacao + '</td>'+
+										 '<td>'+ quarto + '</td>' +
+										'<td>'+ codigo + '</td>' +
+										'<td>'+ descricao + '</td>' +
+										'<td>'+ quantidade + '</td>' +
+										'<td>'+ valorUnitario + '</td>' +
+										'<td>'+ valorTotal + '</td>' +
+										 '<td><button onclick="removeProduto('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
+									 '</tr>';
+		}
+	} catch (error) {
+		localStorage.setItem('produtos', JSON.stringify([]))
 	}
+	
 }
 
-$("#quarto2").mousedown(function(){
+$("#mon").mousedown(function(){
 
-	var cor = $(this).css("background-color")
+	var instance = $(this)[0].childNodes[1].id.slice(6).toLowerCase()
+	
 
+	// Recuperação da Cor das Tags
+	var cor = $("#" + instance).css("background-color")
+	
+	// Filtro para Restaurar as Tags Corretas
 	switch(cor){
 		case 'rgb(30, 144, 255)':
 			$("#tipo").text('reservado')
@@ -56,21 +70,38 @@ $("#quarto2").mousedown(function(){
 			break
 	}
 
-	$("#numquarto").text('2')
+	// Exibição de Dados do Cabeçalho
 	$("#intervalo").text('a4,a5,a6')
+	backupInfos(instance)
 
-	let quarto = $("#numquarto").text()
+	// Variáveis usadas para Filtro
 	let tipo = $("#tipo").text()
 	let tipos = ['pernoite', 'locado']
 
-	if(quarto != 2){
-		console.log('')
-	} else {
-		if(tipos.includes(tipo)){
-			// mostraPrateleira(quarto)
-			mostraVeiculo()
-		} else (
-			console.log('')
-		)
+	// Filtro para Restauração de Produtos e Veículos
+	if(tipos.includes(tipo)){
+		mostraProduto()
+		// mostraGaragem(quarto)
 	}
 });
+
+function backupInfos(instancia){
+
+	// Recuperação da Chave e do LocalStorage
+	// var IDCodigo = $(codigosIDs).get(-1);
+	var dados_particao = JSON.parse(localStorage.getItem(instancia))
+	// console.log(dados_particao)
+
+	var dados_quarto = JSON.parse(localStorage.getItem(dados_particao))
+
+	// Exibição dos Dados Recuperados
+	try {
+		$("#numquarto").text(dados_quarto[0].quarto)
+		$("#entrada").text(dados_quarto[0].datahora)
+		$("#valor-quarto").text(dados_quarto[0].valor)
+	} catch (error) {
+		$("#numquarto").text('')
+		$("#entrada").text('')
+		$("#valor-quarto").text('')
+	}
+}

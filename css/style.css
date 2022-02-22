@@ -1167,18 +1167,32 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 #imagemQuarto1 {
   border: 2px solid #4cae4c;
   box-shadow: inset 0 0 1em #4cae4c, 0 0 1em #4cae4c;
-  background-image: url(../images/img-11.jpg);
+  background-image: url(../images/img-01.jpg);
   border-radius: 50%;
 }
 
 #imagemQuarto2 {
   border: 2px solid #4cae4c;
   box-shadow: inset 0 0 1em #4cae4c, 0 0 1em #4cae4c;
-  background-image: url(../images/img-12.jpg);
+  background-image: url(../images/img-02.jpg);
   border-radius: 50%;
 }
 
-#a1, #a2, #a3, #a4, #a5, #a6 {
+#imagemQuarto3 {
+  border: 2px solid #4cae4c;
+  box-shadow: inset 0 0 1em #4cae4c, 0 0 1em #4cae4c;
+  background-image: url(../images/img-03.jpg);
+  border-radius: 50%;
+}
+
+#imagemQuarto4 {
+  border: 2px solid #4cae4c;
+  box-shadow: inset 0 0 1em #4cae4c, 0 0 1em #4cae4c;
+  background-image: url(../images/img-04.jpg);
+  border-radius: 50%;
+}
+
+#a1, #a2, #a3, #a4, #a5, #a6, #a7, #a8, #a9, #a10, #a11, #a12 {
   visibility: hidden;
   color: #000;
   background: rgba(117, 190, 218, 0);

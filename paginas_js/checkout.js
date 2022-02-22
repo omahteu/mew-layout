@@ -1,9 +1,17 @@
-$("#aplicar").click(function(){
-    
-    var dados_particao = JSON.parse(localStorage.getItem('quarto1'))
-    var dados_quarto = JSON.parse(localStorage.getItem(dados_particao))
 
-    console.log(dados_quarto[0].quarto)
+
+// Consegui somar valores
+
+$(document).ready(function(){
+	informacaoes()
+})
+
+function informacaoes(){
+
+	var numero_quarto = JSON.parse(sessionStorage.getItem('Encerrando'))
+    
+    var dados_particao = JSON.parse(localStorage.getItem('quarto' + numero_quarto))
+    var dados_quarto = JSON.parse(localStorage.getItem(dados_particao))
 
     var dds = JSON.parse(localStorage.getItem('produtos'))
     var prateleira = document.getElementById('itensComprados');
@@ -11,8 +19,6 @@ $("#aplicar").click(function(){
 
 	try {
 		var dados = dds.filter(quartos => quartos.quarto == dados_quarto[0].quarto)
-
-        console.log(dados)
 
 		for(var i = 0; i < dados.length; i++){
 
@@ -60,14 +66,10 @@ $("#aplicar").click(function(){
 		sum += parseFloat(arraySemVazios[a])
 	}
 
-	console.log(sum)
-
 	$("#valorQuarto").text(dados_quarto[0].valor)
 	$("#valorItens").text(sum)
 
 	var ttgeral = Number(dados_quarto[0].valor) + Number(sum)
 
 	$("#totalGeral").text(ttgeral)
-})
-
-// Consegui somar valores
+}

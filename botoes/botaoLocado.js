@@ -15,9 +15,22 @@ $(".locado").click(function(){
                 locado(quarto, rota,  flags[0], flags[1], flags[2])
                 index()
                 break
+
             case '2':
                 var flags = modos.slice(3, 6)
                 locado(quarto, rota, flags[0], flags[1], flags[2])
+                index()
+                break
+
+            case '3':
+                var flags = modos.slice(6, 9)
+                locado(quarto, rota,  flags[0], flags[1], flags[2])
+                index()
+                break
+
+            case '4':
+                var flags = modos.slice(9, 12)
+                locado(quarto, rota,  flags[0], flags[1], flags[2])
                 index()
                 break
         }
