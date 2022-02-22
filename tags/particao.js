@@ -25,8 +25,10 @@ export function index(){
     var codigoID = gera_id()
     codigosIDs.push(codigoID)
 
+    
     if(localStorage.getItem('quarto' + quarto) === null){
         localStorage.setItem('quarto' + quarto, codigoID);
+        
     } else (
         console.log('já exite')
     )

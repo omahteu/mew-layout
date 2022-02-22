@@ -1,4 +1,6 @@
 export function faxina(q, t, x, y, z) {
+
+    console.log('==>' + q, t, x, y, z)
     $("#quarto" + q).css({
         "background-color": "#FFE4C4",
         "opacity": 0.5})

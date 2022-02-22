@@ -38,10 +38,8 @@ function mostraProduto(){
 
 $("[id=mon]").mousedown(function(){
 	
-
 	var instance = $(this)[0].childNodes[1].id.slice(6).toLowerCase()
 	
-
 	// Recuperação da Cor das Tags
 	var cor = $("#" + instance).css("background-color")
 	
@@ -73,8 +71,9 @@ $("[id=mon]").mousedown(function(){
 			break
 	}
 
-
 	var identificador = instance.substr(-1)
+
+	$("#numquarto").text(identificador)
 	
 	switch (identificador) {
 		case '1':
@@ -115,21 +114,23 @@ $("[id=mon]").mousedown(function(){
 
 function backupInfos(instancia){
 
+	
+
 	// Recuperação da Chave e do LocalStorage
 	// var IDCodigo = $(codigosIDs).get(-1);
 	var dados_particao = JSON.parse(localStorage.getItem(instancia))
+	
 	// console.log(dados_particao)
 
 	var dados_quarto = JSON.parse(localStorage.getItem(dados_particao))
 
 	// Exibição dos Dados Recuperados
 	try {
+		
 		$("#numquarto").text(dados_quarto[0].quarto)
 		$("#entrada").text(dados_quarto[0].datahora)
 		$("#valor-quarto").text(dados_quarto[0].valor)
 	} catch (error) {
-		$("#numquarto").text('')
-		$("#entrada").text('')
-		$("#valor-quarto").text('')
+		//
 	}
 }

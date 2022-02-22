@@ -14,5 +14,15 @@ $(".faxina").click(function(){
             var flags = modos.slice(3, 6)
             faxina(quarto, rota, flags[0], flags[1], flags[2])
             break
+
+        case '3':
+            var flags = modos.slice(6, 9)
+            faxina(quarto, rota, flags[0], flags[1], flags[2])
+            break
+
+        case '4':
+            var flags = modos.slice(9, 12)
+            faxina(quarto, rota, flags[0], flags[1], flags[2])
+            break
     }
 })
