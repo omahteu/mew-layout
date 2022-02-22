@@ -1,3 +1,5 @@
+import { modos } from '../boxes/box.js'
+
 function mostraProduto(){
 
 	var nQuarto =  $("#numquarto").text()
@@ -34,7 +36,8 @@ function mostraProduto(){
 	
 }
 
-$("#mon").mousedown(function(){
+$("[id=mon]").mousedown(function(){
+	
 
 	var instance = $(this)[0].childNodes[1].id.slice(6).toLowerCase()
 	
@@ -70,9 +73,34 @@ $("#mon").mousedown(function(){
 			break
 	}
 
+
+	var identificador = instance.substr(-1)
+	
+	switch (identificador) {
+		case '1':
+			$("#intervalo").text(modos.slice(0, 3))
+			backupInfos(instance)
+			break;
+		
+		case '2':
+			$("#intervalo").text(modos.slice(3, 6))
+			backupInfos(instance)
+			break
+
+		case '3':
+			$("#intervalo").text(modos.slice(6, 9))
+			backupInfos(instance)
+			break
+		
+		case '4':
+			$("#intervalo").text(modos.slice(9, 12))
+			backupInfos(instance)
+			break
+	}
+
 	// Exibição de Dados do Cabeçalho
-	$("#intervalo").text('a4,a5,a6')
-	backupInfos(instance)
+	//$("#intervalo").text('a4,a5,a6')
+	//backupInfos(instance)
 
 	// Variáveis usadas para Filtro
 	let tipo = $("#tipo").text()
