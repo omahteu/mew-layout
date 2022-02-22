@@ -29,6 +29,7 @@ export function locado(q, t,  x, y, z) {
     } 
 
     var tipoQuarto = $('#tipo' + q).text()
+    console.log(tipoQuarto)
     
 
     switch (tipoQuarto){

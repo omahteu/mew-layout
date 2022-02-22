@@ -29,7 +29,7 @@ export function triagem(acao, quarto, x, y, z){
                 desfazer(quarto, x, y, z)
 
                 sessionStorage.setItem('Encerrando', quarto)
-
+                                
                 window.open('../paginas/checkout.html', '_blank');
                 aguardando(quarto, x, y, z)
               } else {

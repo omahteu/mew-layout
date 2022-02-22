@@ -11,6 +11,7 @@ function actividade(e) {
 function inativo() {
 	$("#numquarto").text('0')
 	$("#intervalo").text('0')
+  $("#valor-quarto").text('0')
   $("#tipo").text('0')
   $("#entrada").text('')
 	var prateleiraResultado = document.getElementById('lprodutos')
