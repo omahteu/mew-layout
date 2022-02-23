@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $.get("http://127.0.0.1:8000/igs/", function(resultado){
+    /*$.get("http://127.0.0.1:8000/igs/", function(resultado){
 
         var endereco = resultado[0].endereco + ' ' + ' ' + resultado[0].numero + ' - ' + resultado[0].bairro + ' , ' + 
         resultado[0].cidade
@@ -12,5 +12,27 @@ $(document).ready(function(){
         $("#telefone").text(resultado[0].telefone)
         $("#telefone2").text(resultado[0].telefone2)
         $("#telefone3").text(resultado[0].telefone3)
-    })
+    })*/
+
+    const dados = new XMLHttpRequest()
+    dados.onload = function(){
+        
+
+        var resultado = JSON.parse(dados.responseText)
+        console.log(resultado[0])
+
+        var endereco = resultado[0].endereco + ' ' + ' ' + resultado[0].numero + ' - ' + resultado[0].bairro + ' , ' + 
+        resultado[0].cidade
+
+
+        $("#email").text(resultado[0].fantasia)
+        $("#endereco").text(endereco)
+        $("#telefone").text(resultado[0].telefone)
+        $("#telefone2").text(resultado[0].telefone2)
+        $("#telefone3").text(resultado[0].telefone3)
+    }
+
+    dados.open("GET", "http://127.0.0.1:8000/igs/", true)
+    dados.send()
 })
+
