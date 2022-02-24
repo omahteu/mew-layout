@@ -1,5 +1,5 @@
 export function dadosQuartos() {
-    $.get("http://127.0.0.1:8000/quartos/", function(resultado){
+    $.get("https://drf-motel.herokuapp.com/quartos/", function(resultado){
 
         var tabela = document.getElementById('tabelaQuartos')
         tabela.innerHTML = ''

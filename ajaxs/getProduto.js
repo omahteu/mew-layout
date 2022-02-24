@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.get("http://127.0.0.1:8000/produtos/", function(resultado){
+    $.get("https://drf-motel.herokuapp.com/produtos/", function(resultado){
 
     resultado.forEach(function(item){
         $('#cod').append('<option>' + item.descricao + '</option>');

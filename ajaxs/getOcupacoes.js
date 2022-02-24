@@ -1,5 +1,5 @@
 export function dadosOcupacoes() {
-    $.get("http://127.0.0.1:8000/ocupacoes/", function(resultado){
+    $.get("https://drf-motel.herokuapp.com/ocupacoes/", function(resultado){
 
         var tabela = document.getElementById('tabelaOcupacoes')
         tabela.innerHTML = ''

@@ -26,7 +26,7 @@ $("#salvar").click(function(){
             data: dataAtual
         }
 
-    $.post("http://127.0.0.1:8000/produtos/", dados, function(msg){
+    $.post("https://drf-motel.herokuapp.com/produtos/", dados, function(msg){
         alert("Produto Registrado!")
 
         document.getElementById('formPostProduto').reset()
