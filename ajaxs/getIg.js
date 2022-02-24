@@ -32,7 +32,7 @@ $(document).ready(function(){
         $("#telefone3").text(resultado[0].telefone3)
     }
 
-    dados.open("GET", "http://127.0.0.1:8000/igs/", true)
+    dados.open("GET", "https://drf-motel.herokuapp.com/igs/", true)
     dados.send()
 })
 
