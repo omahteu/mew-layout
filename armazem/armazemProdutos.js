@@ -39,14 +39,14 @@ function registroProduto(){
 	}
 
 	// Salvando em LocalStorage
-	if(localStorage.getItem('produtos') === null){
+	if(localStorage.getItem(quarto + 'produtos') === null){
 		var produtos = [];
 		produtos.push(produto);
-		localStorage.setItem('produtos', JSON.stringify(produtos));
+		localStorage.setItem(quarto + 'produtos', JSON.stringify(produtos));
 	} else {
-		var produtos = JSON.parse(localStorage.getItem('produtos'));
+		var produtos = JSON.parse(localStorage.getItem(quarto + 'produtos'));
 		produtos.push(produto);
-		localStorage.setItem('produtos', JSON.stringify(produtos));
+		localStorage.setItem(quarto + 'produtos', JSON.stringify(produtos));
 	}
 
 	// Limpa os Campos
