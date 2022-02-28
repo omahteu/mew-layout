@@ -11,43 +11,36 @@ $("#salvar").click(function(){
 	)
 })
 
-function gera_id(){
-	var tamanho = 3
-	var numero = Math.ceil(Math.random() * Math.pow(10, tamanho))
-	return numero
-}
-
 function registroProduto(){
 	
 	// Parâmetros
-	var codigo = $("#cod").val()
 	var descricao = $("#des").val()
     var quantidade = $("#qtd").val()
 	var valorTotal = $("#tot").val()
     var quarto =  $("#numquarto").text()
     var valorUnitario = $("#vun").val()
+	var horaEntrada = new Date();
+    var hora = horaEntrada.getHours()
+    var minutos = horaEntrada.getMinutes()
+    var datahora = String(hora) + ':' + String(minutos)
+	var valor = $("#valor-quarto").text()
     
     // Objeto com Parãmtros
 	var produto = {
-		codigo: codigo,
 		quarto: quarto,
-		operacao: gera_id(),
 		descricao: descricao,
 		quantidade: quantidade,
 		valor_total: valorTotal,
 		valor_unitario: valorUnitario,
+		datahora: datahora,
+		valor_quarto: valor
 	}
 
-	// Salvando em LocalStorage
-	if(localStorage.getItem(quarto + 'produtos') === null){
-		var produtos = [];
-		produtos.push(produto);
-		localStorage.setItem(quarto + 'produtos', JSON.stringify(produtos));
-	} else {
-		var produtos = JSON.parse(localStorage.getItem(quarto + 'produtos'));
-		produtos.push(produto);
-		localStorage.setItem(quarto + 'produtos', JSON.stringify(produtos));
-	}
+	$.post("http://127.0.0.1:8000/comanda/", produto, function(msg){
+        //alert("Produto Registrado!")
+
+        document.getElementById('formPostProduto').reset()
+    })
 
 	// Limpa os Campos
 	document.getElementById('produtos').reset();
@@ -72,32 +65,31 @@ function removeProduto(operacao){
 
 function mostraProduto(){
 
-	var nQuarto =  $("#numquarto").text()
-	var dados_produtos = JSON.parse(localStorage.getItem('produtos'))
-	var prateleira = document.getElementById('lprodutos');
-	prateleira.innerHTML = '';
+	$.get("http://127.0.0.1:8000/comanda/", function(retorno){
 
+		var nQuarto =  $("#numquarto").text()
+		var prateleira = document.getElementById('lprodutos');
+		prateleira.innerHTML = '';
+
+		var dados = retorno.filter(quartos => quartos.quarto == nQuarto)
+
+		for(var i = 0; i < dados.length; i++){
+
+			var id = dados[i].id
+			var quarto =  dados[i].quarto
+			var descricao = dados[i].descricao
+			var quantidade = dados[i].quantidade
+			var valorUnitario = dados[i].valor_unitario
+			var valorTotal = dados[i].valor_total
 	
-	var dados = dados_produtos.filter(quartos => quartos.quarto == nQuarto)
-
-	for(var i = 0; i < dados.length; i++){
-
-		var operacao =  dados[i].operacao
-		var quarto =  dados[i].quarto
-		var codigo = dados[i].codigo
-		var descricao = dados[i].descricao
-		var quantidade = dados[i].quantidade
-		var valorUnitario = dados[i].valor_unitario
-		var valorTotal = dados[i].valor_total
-
-		prateleira.innerHTML += '<tr><td hidden>'+ operacao + '</td>'+
-		 							'<td>'+ quarto + '</td>' +
-									'<td>'+ codigo + '</td>' +
-									'<td>'+ descricao + '</td>' +
-									'<td>'+ quantidade + '</td>' +
-									'<td>'+ valorUnitario + '</td>' +
-									'<td>'+ valorTotal + '</td>' +
-		 							'<td><button onclick="removeProduto('+ operacao +')" class="btn btn-danger">Remover</button></td>'+
-		 						'</tr>';
-	}
+			prateleira.innerHTML += '<tr>'+
+										'<td>'+ quarto + '</td>' +
+										'<td>'+ descricao + '</td>' +
+										'<td>'+ quantidade + '</td>' +
+										'<td>'+ valorUnitario + '</td>' +
+										'<td>'+ valorTotal + '</td>' +
+										 '<td><button onclick="removeProduto('+ id +')" class="btn btn-danger">Remover</button></td>'+
+									'</tr>';
+		}
+	})
 }

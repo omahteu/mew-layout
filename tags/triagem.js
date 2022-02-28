@@ -3,7 +3,6 @@ import { pernoite } from "./pernoite.js"
 import { locado } from "./locacao.js"
 import { limpeza } from "./limpeza.js"
 import { faxina } from "./faxina.js"
-import { index } from "./particao.js"
 import { aguardando } from './aguardo.js'
 
 var rota = 'rota'
@@ -40,22 +39,18 @@ export function triagem(acao, quarto, x, y, z){
 
         case "Iniciar Pernoite":
             pernoite(quarto, rota, x, y, z)
-            index()
             break
 
         case "Alterar P/ Pernoite":
             pernoite(quarto, rota, x, y, z)
-            index()
             break
 
         case "Iniciar Locação":
             locado(quarto, rota, x, y, z)
-            index()
             break
 
         case 'Alterar P/ Locação':
             locado(quarto, rota, x, y, z)
-            index()
             break
 
         case "Iniciar Limpeza":
@@ -64,7 +59,6 @@ export function triagem(acao, quarto, x, y, z){
 
         case "Iniciar Faxina":
             faxina(quarto, rota, x, y, z)
-            index()
             break
     }
 }
