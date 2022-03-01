@@ -113,56 +113,20 @@ $("[id=mon]").mousedown(function(){
 
 function backupInfos(instancia){
 
-	// Recuperação da Chave e do LocalStorage
-	// var IDCodigo = $(codigosIDs).get(-1);
-	//var dados_particao = JSON.parse(localStorage.getItem(instancia))
-	
-	
-	// console.log(dados_particao)
+	$.get("http://127.0.0.1:8000/header/", function(retorno){
 
-	//var dados_quarto = JSON.parse(localStorage.getItem(dados_particao))
-	
-
-	// Exibição dos Dados Recuperados
-	/*try {
-		
-		$("#numquarto").text(dados_quarto[0].quarto)
-		$("#entrada").text(dados_quarto[0].datahora)
-		$("#valor-quarto").text(dados_quarto[0].valor)
-	} catch (error) {
-		//
-	}*/
-
-	$.get("http://127.0.0.1:8000/comanda/", function(retorno){
 
 		var nQuarto =  $("#numquarto").text()
-		//var prateleira = document.getElementById('lprodutos');
-		//prateleira.innerHTML = '';
 
 		try{
 			var dados = retorno.filter(quartos => quartos.quarto == nQuarto)
 
 			for(var i = 0; i < dados.length; i++){
 	
-				/*var id = dados[i].id
-				var quarto =  dados[i].quarto
-				var descricao = dados[i].descricao
-				var quantidade = dados[i].quantidade
-				var valorUnitario = dados[i].valor_unitario
-				var valorTotal = dados[i].valor_total*/
-
-				$("#numquarto").text(dados[i].quarto)
+				$("#numquarto").text(dados[i].quanrto)
 				$("#entrada").text(dados[i].datahora)
-				$("#valor-quarto").text(dados[i].valor_quarto)
+				$("#valor-quarto").text(dados[i].valor)
 		
-				/*prateleira.innerHTML += '<tr>'+
-											'<td>'+ quarto + '</td>' +
-											'<td>'+ descricao + '</td>' +
-											'<td>'+ quantidade + '</td>' +
-											'<td>'+ valorUnitario + '</td>' +
-											'<td>'+ valorTotal + '</td>' +
-											 '<td><button onclick="removeProduto('+ id +')" class="btn btn-danger">Remover</button></td>'+
-										'</tr>';*/
 			}
 		} catch (error) {
 			localStorage.setItem('produtos', JSON.stringify([]))
